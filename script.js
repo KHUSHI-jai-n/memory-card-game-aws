@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'card4', img: 'images/rollsafe.png' },
         { name: 'card5', img: 'images/success.png' },
         { name: 'card5', img: 'images/success.png' },
-        // ...add more pairs as needed
     ];
+    
 
     function shuffle(array) {
         array.sort(() => 0.5 - Math.random());
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    var click = 0;
     function flipCard() {
         let cardId = this.getAttribute('data-id');
         if (!cardsChosenId.includes(cardId)) {
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(checkForMatch, 500);
             }
         }
+        click++;
     }
 
     function checkForMatch() {
@@ -69,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId = [];
 
         if (cardsWon.length === cardArray.length / 2) {
-            alert('Congratulations! You found them all!');
+            alert('Congratulations! You found them all in ' + click +' clicks!');
         }
     }
 
