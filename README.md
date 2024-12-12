@@ -12,22 +12,16 @@ The Meme Matching Game is a simple memory game built with **HTML**, **CSS**, and
 - If the cards don't match, they flip back to their blank side.
 - Try to match all pairs with the fewest clicks possible!
 
----
-
 ## Features
 - Interactive card flipping animation.
 - Tracks the total number of clicks to complete the game.
 - Dynamic game board with shuffled meme cards every time you play.
 - Fully responsive design for both desktop and mobile devices.
 
----
-
 ## Technology Stack
 - **HTML**: Structure of the game.
 - **CSS**: Styling and layout.
 - **JavaScript**: Game logic and interactivity.
-
----
 
 ## Deployment Details
 
