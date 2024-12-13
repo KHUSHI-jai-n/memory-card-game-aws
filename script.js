@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsChosen = [];
     let cardsChosenId = [];
     let cardsWon = [];
+    var click = 0;
 
     const cardArray = [
         { name: 'card1', img: 'images/distracted.png' },
@@ -22,11 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function shuffle(array) {
         array.sort(() => 0.5 - Math.random());
     }
-
+    
     function createBoard() {
         shuffle(cardArray);
         grid.innerHTML = '';
         cardsWon = [];
+        click = 0;
 
         for (let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img');
@@ -37,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    var click = 0;
     function flipCard() {
         let cardId = this.getAttribute('data-id');
         if (!cardsChosenId.includes(cardId)) {
@@ -72,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (cardsWon.length === cardArray.length / 2) {
             alert('Congratulations! You found them all in ' + click +' clicks!');
-            click = 0 ;
         }
     }
 
