@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         shuffle(cardArray);
         grid.innerHTML = '';
         cardsWon = [];
-        click = 0;
 
         for (let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img');
@@ -73,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (cardsWon.length === cardArray.length / 2) {
             alert('Congratulations! You found them all in ' + click +' clicks!');
+            click = 0;
         }
     }
 
