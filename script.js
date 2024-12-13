@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsChosen = [];
     let cardsChosenId = [];
     let cardsWon = [];
-    var click = 0;
+    let click = 0;
 
     const cardArray = [
         { name: 'card1', img: 'images/distracted.png' },
