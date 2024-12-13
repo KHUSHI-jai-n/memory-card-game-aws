@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (cardsWon.length === cardArray.length / 2) {
             alert('Congratulations! You found them all in ' + click +' clicks!');
+            click = 0;
         }
     }
 
