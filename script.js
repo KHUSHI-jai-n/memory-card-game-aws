@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsChosen = [];
     let cardsChosenId = [];
     let cardsWon = [];
-    let click = 0;
+    // let click = 0;
 
     const cardArray = [
         { name: 'card1', img: 'images/distracted.png' },
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         shuffle(cardArray);
         grid.innerHTML = '';
         cardsWon = [];
+        // click = 0;
 
         for (let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img');
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(checkForMatch, 500);
             }
         }
-        click++;
+        // click++;
     }
 
     function checkForMatch() {
@@ -71,8 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId = [];
 
         if (cardsWon.length === cardArray.length / 2) {
-            alert('Congratulations! You found them all in ' + click +' clicks!');
-            click = 0;
+            alert('Congratulations! You found them all!');
         }
     }
 
